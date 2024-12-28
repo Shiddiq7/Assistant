@@ -1,0 +1,64 @@
+# Asisten Virtual
+
+Skrip `assistant.py` adalah asisten virtual yang dapat mendengarkan perintah suara, berbicara kembali kepada pengguna, dan menjalankan berbagai perintah seperti membuka aplikasi, menutup aplikasi, dan melakukan pencarian web.
+
+## Fitur
+
+### 1. Mendengarkan Perintah Suara
+
+- **Deskripsi**: Asisten dapat mendengarkan perintah suara yang diberikan oleh pengguna menggunakan mikrofon.
+- **Cara Menggunakan**: Setelah menjalankan skrip, cukup ucapkan perintah seperti "buka chrome" atau "cari cuaca di chrome".
+
+### 2. Text-to-Speech
+
+- **Deskripsi**: Asisten dapat mengubah teks menjadi suara menggunakan pustaka `pyttsx3`, sehingga dapat memberikan umpan balik suara kepada pengguna.
+- **Cara Menggunakan**: Setiap kali asisten menjalankan perintah, ia akan berbicara kembali kepada pengguna untuk mengonfirmasi tindakan yang diambil.
+
+### 3. Membuka Aplikasi
+
+- **Deskripsi**: Asisten dapat membuka berbagai aplikasi yang terinstal di sistem operasi Windows, Linux, atau Mac.
+- **Cara Menggunakan**: Ucapkan perintah seperti "buka [nama aplikasi]" (contoh: "buka chrome"). Asisten akan mencari aplikasi tersebut dan membukanya.
+
+### 4. Menutup Aplikasi
+
+- **Deskripsi**: Asisten dapat menutup aplikasi yang sedang berjalan di sistem.
+- **Cara Menggunakan**: Ucapkan perintah seperti "tutup [nama aplikasi]" (contoh: "tutup chrome"). Asisten akan menutup aplikasi yang disebutkan.
+
+### 5. Pencarian Web
+
+- **Deskripsi**: Asisten dapat melakukan pencarian di web menggunakan browser yang ditentukan.
+- **Cara Menggunakan**: Ucapkan perintah seperti "cari [query] di [nama browser]" (contoh: "cari cuaca di chrome"). Asisten akan membuka browser dan melakukan pencarian di Google.
+
+## Persyaratan
+
+- Python 3.x
+- Pustaka `speech_recognition`
+- Pustaka `pyttsx3`
+- Mikrofon untuk input suara
+
+## Instalasi
+
+1. Pastikan Python 3.x sudah terinstal di sistem Anda.
+2. Instal pustaka yang diperlukan dengan perintah berikut:
+   ```bash
+   pip install SpeechRecognition pyttsx3
+   ```
+
+## Penggunaan
+
+1. Jalankan skrip dengan perintah:
+   ```bash
+   python assistant.py
+   ```
+2. Asisten akan menyapa Anda dan menunggu perintah suara.
+3. Berikan perintah sesuai dengan fitur yang ingin digunakan:
+   - **Membuka Aplikasi**: "buka [nama aplikasi]"
+   - **Menutup Aplikasi**: "tutup [nama aplikasi]"
+   - **Pencarian Web**: "cari [query] di [nama browser]"
+4. Untuk menghentikan asisten, ucapkan "berhenti".
+
+## Catatan
+
+- Pastikan mikrofon Anda berfungsi dengan baik untuk input suara.
+- Beberapa aplikasi mungkin memerlukan path khusus yang harus disesuaikan dalam skrip.
+
