@@ -33,6 +33,7 @@ def speak(text):
     # Inisialisasi engine text-to-speech
     type_text(text)
     engine = pyttsx3.init()
+    engine.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0')
     engine.say(text)
     engine.runAndWait()
 
@@ -60,7 +61,7 @@ def execute_command(command):
                     'photoshop': r'C:\Program Files\Adobe\Adobe Photoshop CC 2020\Photoshop.exe',
                     'visual studio code': r'C:\Users\%USERNAME%\AppData\Local\Programs\Microsoft VS Code\Code.exe',
                     'steam': r'C:\Program Files (x86)\Steam\Steam.exe',
-                    'discord': r'C:\Users\%USERNAME%\AppData\Local\Discord\app-1.0.9003\Discord.exe'
+                    'discord': r'C:\Users\%USERNAME%\AppData\Local\Discord\app-1.0.9003\Discord.exe',
                 }
                 
                 # Cek apakah ada mapping khusus untuk aplikasi
@@ -178,6 +179,7 @@ def execute_command(command):
                                 speak(f"Maaf, aplikasi {app_name} tidak ditemukan di sistem")
                             else:
                                 speak(f"Terjadi kesalahan saat membuka {app_name}")
+                    
                 
         except Exception as e:
             type_text(f"Error: {str(e)}")
