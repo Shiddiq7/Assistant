@@ -267,7 +267,7 @@ def execute_command(command):
         except:
             speak("Maaf, saya tidak dapat menjalankan perintah tersebut")
             
-
+# Opening
 def main():
     type_text = "Halo! Saya adalah asisten virtual Anda. Apa yang bisa saya bantu hari ini?"
     speak(type_text)
